@@ -12,3 +12,8 @@ h1{
     margin-top: auto;
     margin-bottom: auto;
 }
+
+li {
+    display: list-item;
+    list-style-type: "🐾";
+}
