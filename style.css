@@ -1,13 +1,13 @@
+
 * {
+    color: black;
+    margin: auto;
+    font-weight: 100;
+    font-size: max(1rem, 28px);
+    font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
     background-image: url(https://wallpapers.com/images/featured/nyan-cat-background-1ldrgvod52e6vi0m.jpg);
-    padding: 10px;
-}
-
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: max(1rem, 28px);
-
+   
 }
 
 h1{
