@@ -1,14 +1,38 @@
 * {
-    border: solid red 2px;
+    background-image: url(https://wallpapers.com/images/featured/nyan-cat-background-1ldrgvod52e6vi0m.jpg);
+    padding: 10px;
 }
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: max(1rem, 16px);
+    font-size: max(1rem, 28px);
 
 }
 
 h1{
+    text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
+ul li {
+    display: inline;
+    list-style: none;
+
+}
+button:hover{
+    position: relative;
+    display: flex;
+    background: rgb(218, 12, 12);
+
+
+}
+main ul li {
+    column-fill: auto;
+
+    
+
+
+
+}
+
+
