@@ -46,7 +46,7 @@ loadButton.on('click', loadClient);
 executeButton.on('click', execute);
 
 
-// time on header
+// time on header with one second refresh
 // format date and time
 
 function time(){
@@ -54,6 +54,4 @@ function time(){
     var date = document.getElementById("time")
     date.innerHTML = myDate;
 }
-
-
 setInterval(time,1000);
