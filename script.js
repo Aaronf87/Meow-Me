@@ -10,14 +10,14 @@ this.hide();
 }
 
 // **** Youtube fetch  section ****
+// Loads youtube api client
 function loadClient() {
 gapi.client.setApiKey("AIzaSyDS0kgb0_u9ydK6nmdUbP70KZfQ2Yb0V2w");
 return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-    .then(function() { console.log("GAPI client loaded for API"); },
-            function(err) { console.error("Error loading GAPI client for API", err); });
+    .then(function() { console.log("GAPI client loaded for API"); });
 }
 
-// Make sure the client is loaded before calling this method.
+// Searches Youtube videos using the specified parameters
 function execute() {
 return gapi.client.youtube.search.list({
     "part": [
@@ -26,17 +26,19 @@ return gapi.client.youtube.search.list({
     "maxResults": 5,
     "q": "cats",
     "safeSearch": "moderate",
-})
+    "type": "video"
+})     // Handles whatever data is returned from search
     .then(function(response) {
-            // Handle the results here (response.result has the parsed body).
             console.log("Response", response);
-            console.log(response.result.items);
-            console.log(response.result.items[0].id[1])
-            },
-            function(err) { console.error("Execute error", err); });
+            // Iterates through returned data and pulls the video ID for each result
+            for(i=0; i<response.result.items.length; i++) {
+            var videoId = response.result.items[i].id.videoId;
+            console.log(videoId);
+            }
+            });
 }
 gapi.load("client");
-// **** end of Youtube fetch section ****
+// **** End of Youtube fetch section ****
 
 // Listener on refresh button
 refreshEl.on('click', refresh);
