@@ -1,12 +1,15 @@
 var buttonEl = $('#button');
 
-function buttonPress (event) {
+
+// Function runs once refresh button is clicked
+function refresh (event) {
 event.preventDefault;
 
 this.hide();
 }
 
-buttonEl.on('click', buttonPress);
+// Listener on refresh button
+buttonEl.on('click', refresh);
 
 
 // time on header
