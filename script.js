@@ -13,8 +13,15 @@ buttonEl.on('click', refresh);
 
 
 // time on header
+// format date and time
 
-var myDate = new Date();
+function time(){
+    var myDate = new Date();
+    var date = document.getElementById("time")
+    date.innerHTML = myDate;
+}
 
-var date = document.getElementById("time")
-date.innerHTML = myDate;
+
+setInterval(time,1000);
+
+  

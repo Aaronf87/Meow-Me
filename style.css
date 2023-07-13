@@ -14,25 +14,8 @@ h1{
     margin-top: auto;
     margin-bottom: auto;
 }
-ul li {
-    display: inline;
-    list-style: none;
 
+li {
+    display: list-item;
+    list-style-type: "🐾";
 }
-button:hover{
-    position: relative;
-    display: flex;
-    background: rgb(218, 12, 12);
-
-
-}
-main ul li {
-    column-fill: auto;
-
-    
-
-
-
-}
-
-
