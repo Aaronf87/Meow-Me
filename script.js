@@ -6,6 +6,11 @@ var vid2 = document.getElementById("#v2")
 var vid3 = document.getElementById("#v3")
 var vid4 = document.getElementById("#v4")
 var vid5 = document.getElementById("#v5")
+var gif1 = document.getElementById("#g1")
+var gif2 = document.getElementById("#g2")
+var gif3 = document.getElementById("#g3")
+var gif4 = document.getElementById("#g4")
+var gif5 = document.getElementById("#g5")
 
 // Holds videoIds from the Youtube fetch function
 var videoArray = [];
@@ -75,8 +80,3 @@ function time(){
 }
 setInterval(time,1000);
 
-var gif1 = document.getElementById("g1")
-var gif2 = document.getElementById("g2")
-var gif3 = document.getElementById("g3")
-var gif4 = document.getElementById("g4")
-var gif5 = document.getElementById("g5")
