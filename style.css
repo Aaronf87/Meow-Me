@@ -1,9 +1,10 @@
 
 * {
+    padding: auto;
     color: black;
     margin: auto;
     font-weight: 100;
-    font-size: max(1rem, 28px);
+    font-size: max(1rem, 32px);
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
     background-image: url(https://wallpapers.com/images/featured/nyan-cat-background-1ldrgvod52e6vi0m.jpg);
@@ -11,12 +12,51 @@
 }
 
 h1{
+    font: (1em, 50px) 'Josefin Sans';
+    color: rgb(243, 7, 7);
+    font-weight: 200px;
+    box-sizing: border-box;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 li {
+    justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";
+    
 }
+
+main {
+    display:flex;
+    
+
+}
+
+button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+#loadBtn {
+background-color: rgb(6, 6, 6);
+position: relative;
+margin-left: -50px;
+left: 50%;
+bottom: 0px;
+}
+
+#executeBtn{
+    position: relative;
+}
+
+#refreshBtn{
+    position: relative;
+    left: 1px;
+
+
+}
+
+
+
