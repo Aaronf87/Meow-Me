@@ -2,6 +2,8 @@ var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
 
+// Holds videoIds from the Youtube fetch function
+var videoArray = [];
 
 // Function runs once refresh button is clicked
 function refresh (event) {
@@ -30,10 +32,10 @@ return gapi.client.youtube.search.list({
 })     // Handles whatever data is returned from search
     .then(function(response) {
             console.log("Response", response);
-            // Iterates through returned data and pulls the video ID for each result
+            // Iterates through returned data and pulls the video ID for each result, pushes each to the videoArray array
             for(i=0; i<response.result.items.length; i++) {
             var videoId = response.result.items[i].id.videoId;
-            console.log(videoId);
+            videoArray.push(videoId);
             }
             });
 }
