@@ -22,12 +22,16 @@ h1{
 }
 
 li {
+    justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";
+    
 }
 
 main {
-    display: flex;
+    display:flex;
+    
+
 }
 
 button {
