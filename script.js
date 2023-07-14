@@ -6,6 +6,11 @@ var vid2 = document.getElementById("#v2")
 var vid3 = document.getElementById("#v3")
 var vid4 = document.getElementById("#v4")
 var vid5 = document.getElementById("#v5")
+var gif1 = document.getElementById("#g1")
+var gif2 = document.getElementById("#g2")
+var gif3 = document.getElementById("#g3")
+var gif4 = document.getElementById("#g4")
+var gif5 = document.getElementById("#g5")
 
 // Holds videoIds from the Youtube fetch function
 var videoArray = [];
@@ -31,16 +36,26 @@ return gapi.client.youtube.search.list({
     "snippet"
     ],
     "maxResults": 5,
-    "q": "cats",
+    "q": "cat",
     "safeSearch": "moderate",
-    "type": "video"
+    "type": "video",
+    "videoEmbeddable": "true"
 })     // Handles whatever data is returned from search
     .then(function(response) {
             console.log("Response", response);
-            // Iterates through returned data and pulls the video ID for each result, pushes each to the videoArray array
+            // Iterates through returned data and pulls the video ID for each result, concatenates each into a viable url, pushes each url to the videoArray array
             for(i=0; i<response.result.items.length; i++) {
             var videoId = response.result.items[i].id.videoId;
-            videoArray.push(videoId);
+
+            // Line 41 & 42
+            //var index = i.toString();
+            //var targetedItem = document.getElementById(index);
+            var url1 = "https://www.youtube.com/embed/";
+            var url2 = "?autoplay=1";
+            var videoUrl = (url1 + videoId + url2);
+            videoArray.push(videoUrl);
+            console.log(videoUrl);
+            console.log(videoArray);
             }
             });
 }
@@ -65,9 +80,3 @@ function time(){
 }
 setInterval(time,1000);
 
-
-var gif1 = document.getElementById("g1")
-var gif2 = document.getElementById("g2")
-var gif3 = document.getElementById("g3")
-var gif4 = document.getElementById("g4")
-var gif5 = document.getElementById("g5")
