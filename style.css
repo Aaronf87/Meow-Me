@@ -1,7 +1,7 @@
 
 * {
     padding: auto;
-    color: black;
+    color: rgb(0, 0, 0);
     margin: auto;
     font-weight: 100;
     font-size: max(1rem, 32px);
@@ -12,9 +12,10 @@
 }
 
 h1{
-    font: (1em, 50px) 'Josefin Sans';
-    color: rgb(243, 7, 7);
-    font-weight: 200px;
+    font-weight: 400;
+    font-size: 42px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgba(228, 12, 4, 0.914);
     box-sizing: border-box;
     text-align: center;
     margin-top: auto;
@@ -22,6 +23,7 @@ h1{
 }
 
 li {
+    display: flex;
     justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";

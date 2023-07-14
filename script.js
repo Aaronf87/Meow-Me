@@ -65,6 +65,7 @@ function time(){
 }
 setInterval(time,1000);
 
+
 var gif1 = document.getElementById("g1")
 var gif2 = document.getElementById("g2")
 var gif3 = document.getElementById("g3")
