@@ -72,11 +72,12 @@ executeButton.on('click', execute);
 
 // time on header with one second refresh
 // format date and time
-
+// set time and date 
 function time(){
-    var myDate = new Date();
+    var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
     var date = document.getElementById("time")
-    date.innerHTML = myDate;
-}
-setInterval(time,1000);
+    date.textContent = myDate;
+  }
+  setInterval(time, 1000);
+  
 
