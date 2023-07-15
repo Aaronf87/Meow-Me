@@ -1,7 +1,19 @@
 var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
+var vid1 = document.getElementById("#v1")
+var vid2 = document.getElementById("#v2")
+var vid3 = document.getElementById("#v3")
+var vid4 = document.getElementById("#v4")
+var vid5 = document.getElementById("#v5")
+var gif1 = document.getElementById("#g1")
+var gif2 = document.getElementById("#g2")
+var gif3 = document.getElementById("#g3")
+var gif4 = document.getElementById("#g4")
+var gif5 = document.getElementById("#g5")
 
+// Holds videoIds from the Youtube fetch function
+var videoArray = [];
 
 // Function runs once refresh button is clicked
 function refresh (event) {
@@ -24,16 +36,26 @@ return gapi.client.youtube.search.list({
     "snippet"
     ],
     "maxResults": 5,
-    "q": "cats",
+    "q": "cat",
     "safeSearch": "moderate",
-    "type": "video"
+    "type": "video",
+    "videoEmbeddable": "true"
 })     // Handles whatever data is returned from search
     .then(function(response) {
             console.log("Response", response);
-            // Iterates through returned data and pulls the video ID for each result
+            // Iterates through returned data and pulls the video ID for each result, concatenates each into a viable url, pushes each url to the videoArray array
             for(i=0; i<response.result.items.length; i++) {
             var videoId = response.result.items[i].id.videoId;
-            console.log(videoId);
+
+            // Line 41 & 42
+            //var index = i.toString();
+            //var targetedItem = document.getElementById(index);
+            var url1 = "https://www.youtube.com/embed/";
+            var url2 = "?autoplay=1";
+            var videoUrl = (url1 + videoId + url2);
+            videoArray.push(videoUrl);
+            console.log(videoUrl);
+            console.log(videoArray);
             }
             });
 }
@@ -50,10 +72,12 @@ executeButton.on('click', execute);
 
 // time on header with one second refresh
 // format date and time
-
+// set time and date 
 function time(){
-    var myDate = new Date();
+    var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
     var date = document.getElementById("time")
-    date.innerHTML = myDate;
-}
-setInterval(time,1000);
+    date.textContent = myDate;
+  }
+  setInterval(time, 1000);
+  
+

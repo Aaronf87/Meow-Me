@@ -7,48 +7,56 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Link the DayJS library -->
+<script
+src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+crossorigin="anonymous"
+></script>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>Meow Me!</title>
 </head>
 <body>
     <header>
-        <h1 class="title">Meow Me</h1>
-    
+        <h1>Meow Me!</h1>
         <div id="time"></div>
     </header>
 
-<button type="button" id="refreshBtn">Refresh Me!</button>
-
+<button type="button" class="button is-link is-outlined" id="refreshBtn">Refresh Me!</button>
+<span class="icon is-small">
+    <i class="fas fa-align-center"></i>
+  </span>
 <main>
-    <div class="columns is-vcentered"></div>
-        <div class="column is-8">
+    <div class="left"></div>
         <ul>
-            <div class="column">
-                <li>Video 1</li>
-            </div>
-            <div class="column">
-                <li>Video 2</li>
-            </div>
-            
-            <li>Video 3</li>
-            <li>Video 4</li>
-            <li>Video 5</li>
+            <li id="v1">Video 1</li>
+            <li id="v2">Video 2</li>
+            <li id="v3">Video 3</li>
+            <li id="v4">Video 4</li>
+            <li id="v5">Video 5</li>
         </ul>
-        
         <div class="right"></div>
         <ul>
-            <li>Story 1</li>
-            <li>Story 2</li>
-            <li>Story 3</li>
-            <li>Story 4</li>
-            <li>Story 5</li>
+            <li id="g1">Gifs 1</li>
+            <li id="g2">Gifs 2</li>
+            <li id="g3">Gifs 3</li>
+            <li id ="g4">Gifs 4</li>
+            <li id = "g5">Gifs 5</li>
         </ul>
         
     
-    <button id="loadBtn">load</button>
-    <button id="executeBtn">execute</button>
+    </main>
 
-</main>
+    <div class="buttons"></div>
+ <button class="button is-warning is-outlined"id="loadBtn">Load</button>
+ <span class="icon is-medium">
+    <i class="fas fa-align-center"></i>
+  </span>
+<button class="button is-danger is-outlined" id="executeBtn">Execute</button>
+<span class="icon is-medium">
+        <i class="fas fa-align-center"></i>
+      </span>
+</div>
 
 <script src="https://apis.google.com/js/api.js"></script>
 <script
