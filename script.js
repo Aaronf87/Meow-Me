@@ -99,14 +99,21 @@ function time(){
         return response.json();
     })
     .then(function (response) {
-        console.log(response.data[0])
+        console.log(response.data[0].images.original.url)
         
-        var g1 = document.querySelector("#g1").textContent = response.data[0];
+        var g1 = document.querySelector("#g1");
+        g1.textContent = response.data[0].images.original.url
+        
+        // for (var i = 0; i < response.data[0].length; i++) {
+            // };
+            // function getGif(){
+
+    // }}
+    // )
     })};
 
 fetchButton.addEventListener('click', getApi);
 
-// for (var i = 0; i < data.length; i++) {
 //     var listItem = document.createElement('li');
 //     listItem.textContent = data[i].html_url;
 //     repoList.appendChild(listItem)
