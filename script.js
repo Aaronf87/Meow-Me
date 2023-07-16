@@ -86,33 +86,40 @@ function time(){
   var gifList = document.querySelector('ul');
   var fetchButton = document.getElementById('fetch-button');
   
+  // request giphy api function...
   function getApi() {
-    // request giphy api ___________
-    
+
+    // String concatenate url and api with our search project needs...
     var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + gifApi + "&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips"
 
-
-
-    
+    // fetch request syntax with response from giphy api
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
     })
     .then(function (response) {
+        // console log to examine the right data...
         console.log(response.data[0].images.original.url)
-        
-        var g1 = document.querySelector("#g1");
-        g1.textContent = response.data[0].images.original.url
-        
+        // grabbing element 
+        var gif = document.getElementById("gf1")
+        // saving the gif into a variable named gif..
+        gif.textContent = response.data[0].images.original.url
+        console.log(newGif);
+
         // for (var i = 0; i < response.data[0].length; i++) {
             // };
             // function getGif(){
+                getNewGif();
+                // }}
+                // )
+            })};
+            function getNewGif(gif){
+            //    gif.setAttribute("img src", newGif);
 
-    // }}
-    // )
-    })};
-
-fetchButton.addEventListener('click', getApi);
+            }
+            
+            
+            fetchButton.addEventListener('click', getApi);
 
 //     var listItem = document.createElement('li');
 //     listItem.textContent = data[i].html_url;
