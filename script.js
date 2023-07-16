@@ -89,16 +89,19 @@ function time(){
   function getApi() {
     // request giphy api ___________
     
-    var requestUrl = "https://api.giphy.com/v1/gifs/trending?api_key=" + gifApi + "&limit=5&offset=0&rating=g&bundle=messaging_non_clips"
+    var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + gifApi + "&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips"
 
-    
+
+
     
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
     })
     .then(function (response) {
-        console.log(response)
+        console.log(response.data[0])
+        
+        var g1 = document.querySelector("#g1").textContent = response.data[0];
     })};
 
 fetchButton.addEventListener('click', getApi);
