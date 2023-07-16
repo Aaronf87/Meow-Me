@@ -80,4 +80,30 @@ function time(){
   }
   setInterval(time, 1000);
   
+// Setting up GiphyApi
 
+  var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
+  var gifList = document.querySelector('ul');
+  var fetchButton = document.getElementById('fetch-button');
+  
+  function getApi() {
+    // request giphy api ___________
+    
+    var requestUrl = "https://api.giphy.com/v1/gifs/trending?api_key=" + gifApi + "&limit=5&offset=0&rating=g&bundle=messaging_non_clips"
+
+    
+    
+    fetch(requestUrl)
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (response) {
+        console.log(response)
+    })};
+
+fetchButton.addEventListener('click', getApi);
+
+// for (var i = 0; i < data.length; i++) {
+//     var listItem = document.createElement('li');
+//     listItem.textContent = data[i].html_url;
+//     repoList.appendChild(listItem)
