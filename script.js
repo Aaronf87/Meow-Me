@@ -103,11 +103,21 @@ function time(){
         // grabbing element 
         var gif = document.getElementById("gf1")
         // saving the gif into a variable named gif..
-        gif.textContent = response.data[0].images.original.url
-        console.log(newGif);
+        // gif.textContent = response.data[0].images.original.url
+       
 
-        // for (var i = 0; i < response.data[0].length; i++) {
-            // };
+        for (var i = 0; i < response.data.length; i++) {
+            fetchGif = response.data[i].images.original.url
+            console.log(fetchGif);
+            var next = "";
+            gif.src = fetchGif;
+            next+= response.data[i].images.original.url;
+           console.log(fetchGif);
+           gif.src =  fetchGif;
+           
+          
+
+            };
             // function getGif(){
                 getNewGif();
                 // }}
