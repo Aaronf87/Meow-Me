@@ -108,16 +108,17 @@ function time(){
         var gif5 = document.getElementById("g5")
         // saving the gif into a variable named gif..
         // gif.textContent = response.data[0].images.original.url
+        console.log(response.data);
        
 
         for (var i = 0; i < response.data.length; i++) {
             var fetchGif = response.data[i].images.original.url
             console.log(fetchGif);
-            gif.src =  fetchGif[2];
-            gif2.src = fetchGif;
-            gif3.src = fetchGif;
-            gif4.src = fetchGif;
-            gif5.src = fetchGif;
+            gif.src =  response.data[0].images.original.url;
+            gif2.src = response.data[1].images.original.url;
+            gif3.src = response.data[2].images.original.url;
+            gif4.src = response.data[3].images.original.url;
+            gif5.src = response.data[4].images.original.url;
         };
         
     })};
