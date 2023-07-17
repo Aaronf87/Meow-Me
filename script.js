@@ -102,22 +102,29 @@ function time(){
         // console.log(response.data[0].images.original.url)
         // grabbing element 
         var gif = document.getElementById("gf1")
+        var gif2 = document.getElementById("g2")
+        var gif3 = document.getElementById("g3")
+        var gif4 = document.getElementById("g4")
+        var gif5 = document.getElementById("g5")
         // saving the gif into a variable named gif..
         // gif.textContent = response.data[0].images.original.url
        
 
         for (var i = 0; i < response.data.length; i++) {
             var fetchGif = response.data[i].images.original.url
-            var next = "";
-            gif.src = fetchGif;
-            next+= response.data[i].images.original.url;
-           console.log(fetchGif);
-           gif.src =  fetchGif;
-           
-            };
-         
-            })};
+            console.log(fetchGif);
+            gif.src =  fetchGif[2];
+            gif2.src = fetchGif;
+            gif3.src = fetchGif;
+            gif4.src = fetchGif;
+            gif5.src = fetchGif;
+        };
+        
+    })};
+    // use gif2 - gif 5, they are grabbed by id!!
     
+    // var next = "";
+    // next+= response.data[i].images.original.url;
             
             
             fetchButton.addEventListener('click', getApi);
