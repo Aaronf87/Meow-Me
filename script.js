@@ -83,9 +83,7 @@ function time(){
   // Setting up GiphyApi
   
   var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
-  var gifList = document.querySelector('ul');
-  var fetchButton = document.getElementById('fetch-button');
-  
+
   // request giphy api function...
   function getApi() {
       
@@ -122,11 +120,7 @@ function time(){
             };
             
         })};
-        // use gif2 - gif 5, they are grabbed by id!!
+        
         getApi();
     
-    // var next = "";
-    // next+= response.data[i].images.original.url;
-            
-            
-            // fetchButton.addEventListener('click', getApi);
+   
