@@ -114,19 +114,10 @@ function time(){
            console.log(fetchGif);
            gif.src =  fetchGif;
            
-          
-
             };
          
             })};
-            // function getNewGif(gif){
-            //    gif.setAttribute("img src", newGif);
-         
-            // }
+    
             
             
             fetchButton.addEventListener('click', getApi);
-
-//     var listItem = document.createElement('li');
-//     listItem.textContent = data[i].html_url;
-//     repoList.appendChild(listItem)
