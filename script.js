@@ -99,7 +99,7 @@ function time(){
     })
     .then(function (response) {
         // console log to examine the right data...
-        console.log(response.data[0].images.original.url)
+        // console.log(response.data[0].images.original.url)
         // grabbing element 
         var gif = document.getElementById("gf1")
         // saving the gif into a variable named gif..
@@ -107,8 +107,7 @@ function time(){
        
 
         for (var i = 0; i < response.data.length; i++) {
-            fetchGif = response.data[i].images.original.url
-            console.log(fetchGif);
+            var fetchGif = response.data[i].images.original.url
             var next = "";
             gif.src = fetchGif;
             next+= response.data[i].images.original.url;
@@ -118,15 +117,12 @@ function time(){
           
 
             };
-            // function getGif(){
-                getNewGif();
-                // }}
-                // )
+         
             })};
-            function getNewGif(gif){
+            // function getNewGif(gif){
             //    gif.setAttribute("img src", newGif);
-
-            }
+         
+            // }
             
             
             fetchButton.addEventListener('click', getApi);
