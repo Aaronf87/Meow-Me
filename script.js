@@ -77,9 +77,9 @@ function time(){
     var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
     var date = document.getElementById("time")
     date.textContent = myDate;
+    getApi();
   }
   setInterval(time, 1000);
-  
 // Setting up GiphyApi
 
   var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
@@ -128,4 +128,4 @@ function time(){
     // next+= response.data[i].images.original.url;
             
             
-            fetchButton.addEventListener('click', getApi);
+            // fetchButton.addEventListener('click', getApi);
