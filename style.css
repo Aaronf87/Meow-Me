@@ -35,6 +35,8 @@ ul {
 
 img {
     max-height: 200px;
+    border-radius: 15px;
+
 }
 
 main {
