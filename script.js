@@ -80,4 +80,47 @@ function time(){
   }
   setInterval(time, 1000);
   
+  // Setting up GiphyApi
+  
+  var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
 
+  // request giphy api function...
+  function getApi() {
+      
+      // String concatenate url and api with our search project needs...
+      var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + gifApi + "&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips"
+      
+      // fetch request syntax with response from giphy api
+      fetch(requestUrl)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (response) {
+            // console log to examine the right data...
+            // console.log(response.data[0].images.original.url)
+            // grabbing element 
+            var gif = document.getElementById("gf1")
+            var gif2 = document.getElementById("g2")
+            var gif3 = document.getElementById("g3")
+            var gif4 = document.getElementById("g4")
+            var gif5 = document.getElementById("g5")
+            // saving the gif into a variable named gif..
+            // gif.textContent = response.data[0].images.original.url
+            console.log(response.data);
+            
+            
+            for (var i = 0; i <= 5; i++) {
+                var fetchGif = response.data[i].images.original.url
+                console.log(i);
+                gif.src =  response.data[0].images.original.url;
+                gif2.src = response.data[1].images.original.url;
+                gif3.src = response.data[2].images.original.url;
+                gif4.src = response.data[3].images.original.url;
+                gif5.src = response.data[4].images.original.url;
+            };
+            
+        })};
+        
+        getApi();
+    
+   

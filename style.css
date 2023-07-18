@@ -28,6 +28,10 @@ li {
     
 }
 
+img {
+    max-height: 200px;
+}
+
 main {
     display:flex;
     
@@ -54,8 +58,6 @@ bottom: 0px;
 #refreshBtn{
     position: relative;
     left: 1px;
-
-
 }
 
 
