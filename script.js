@@ -46,16 +46,23 @@ return gapi.client.youtube.search.list({
             // Iterates through returned data and pulls the video ID for each result, concatenates each into a viable url, pushes each url to the videoArray array
             for(i=0; i<response.result.items.length; i++) {
             var videoId = response.result.items[i].id.videoId;
-
-            // Line 41 & 42
-            //var index = i.toString();
-            //var targetedItem = document.getElementById(index);
             var url1 = "https://www.youtube.com/embed/";
             var url2 = "?autoplay=1";
             var videoUrl = (url1 + videoId + url2);
-            videoArray.push(videoUrl);
-            console.log(videoUrl);
-            console.log(videoArray);
+
+            if (i == 0){
+                var player = document.getElementById("vid1");
+            } else if (i == 1){
+                var player = document.getElementById("vid2");
+            } else if (i == 2){
+                var player = document.getElementById("vid3");
+            } else if (i == 3){
+                var player = document.getElementById("vid4");
+            } else if (i == 4) {
+                var player = document.getElementById("vid5");
+            }
+
+            player.src = videoUrl;
             }
             });
 }
