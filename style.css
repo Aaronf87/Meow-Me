@@ -25,11 +25,18 @@ li {
     justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";
-    
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 img {
     max-height: 200px;
+    border-radius: 15px;
+
 }
 
 main {
@@ -60,5 +67,8 @@ bottom: 0px;
     left: 1px;
 }
 
-
-
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
