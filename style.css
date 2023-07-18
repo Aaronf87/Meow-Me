@@ -25,7 +25,12 @@ li {
     justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";
-    
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 img {
