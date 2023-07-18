@@ -67,5 +67,8 @@ bottom: 0px;
     left: 1px;
 }
 
-
-
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
