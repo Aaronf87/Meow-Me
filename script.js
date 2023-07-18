@@ -1,19 +1,7 @@
 var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
-var vid1 = document.getElementById("#v1")
-var vid2 = document.getElementById("#v2")
-var vid3 = document.getElementById("#v3")
-var vid4 = document.getElementById("#v4")
-var vid5 = document.getElementById("#v5")
-var gif1 = document.getElementById("#g1")
-var gif2 = document.getElementById("#g2")
-var gif3 = document.getElementById("#g3")
-var gif4 = document.getElementById("#g4")
-var gif5 = document.getElementById("#g5")
 
-// Holds videoIds from the Youtube fetch function
-var videoArray = [];
 
 // Function runs once refresh button is clicked
 function refresh (event) {
@@ -46,16 +34,23 @@ return gapi.client.youtube.search.list({
             // Iterates through returned data and pulls the video ID for each result, concatenates each into a viable url, pushes each url to the videoArray array
             for(i=0; i<response.result.items.length; i++) {
             var videoId = response.result.items[i].id.videoId;
-
-            // Line 41 & 42
-            //var index = i.toString();
-            //var targetedItem = document.getElementById(index);
             var url1 = "https://www.youtube.com/embed/";
             var url2 = "?autoplay=1";
             var videoUrl = (url1 + videoId + url2);
-            videoArray.push(videoUrl);
-            console.log(videoUrl);
-            console.log(videoArray);
+
+            if (i == 0){
+                var player = document.getElementById("vid1");
+            } else if (i == 1){
+                var player = document.getElementById("vid2");
+            } else if (i == 2){
+                var player = document.getElementById("vid3");
+            } else if (i == 3){
+                var player = document.getElementById("vid4");
+            } else if (i == 4) {
+                var player = document.getElementById("vid5");
+            }
+
+            player.src = videoUrl;
             }
             });
 }
@@ -80,57 +75,47 @@ function time(){
   }
   setInterval(time, 1000);
   
-// Setting up GiphyApi
-
-  var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
-  var gifList = document.querySelector('ul');
-  var fetchButton = document.getElementById('fetch-button');
+  // Setting up GiphyApi
   
+  var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
+
   // request giphy api function...
   function getApi() {
-
-    // String concatenate url and api with our search project needs...
-    var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + gifApi + "&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips"
-
-    // fetch request syntax with response from giphy api
-    fetch(requestUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (response) {
-        // console log to examine the right data...
-        console.log(response.data[0].images.original.url)
-        // grabbing element 
-        var gif = document.getElementById("gf1")
-        // saving the gif into a variable named gif..
-        // gif.textContent = response.data[0].images.original.url
-       
-
-        for (var i = 0; i < response.data.length; i++) {
-            fetchGif = response.data[i].images.original.url
-            console.log(fetchGif);
-            var next = "";
-            gif.src = fetchGif;
-            next+= response.data[i].images.original.url;
-           console.log(fetchGif);
-           gif.src =  fetchGif;
-           
-          
-
+      
+      // String concatenate url and api with our search project needs...
+      var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + gifApi + "&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips"
+      
+      // fetch request syntax with response from giphy api
+      fetch(requestUrl)
+      .then(function (response) {
+          return response.json();
+        })
+        .then(function (response) {
+            // console log to examine the right data...
+            // console.log(response.data[0].images.original.url)
+            // grabbing element 
+            var gif = document.getElementById("gf1")
+            var gif2 = document.getElementById("g2")
+            var gif3 = document.getElementById("g3")
+            var gif4 = document.getElementById("g4")
+            var gif5 = document.getElementById("g5")
+            // saving the gif into a variable named gif..
+            // gif.textContent = response.data[0].images.original.url
+            console.log(response.data);
+            
+            
+            for (var i = 0; i <= 5; i++) {
+                var fetchGif = response.data[i].images.original.url
+                console.log(i);
+                gif.src =  response.data[0].images.original.url;
+                gif2.src = response.data[1].images.original.url;
+                gif3.src = response.data[2].images.original.url;
+                gif4.src = response.data[3].images.original.url;
+                gif5.src = response.data[4].images.original.url;
             };
-            // function getGif(){
-                getNewGif();
-                // }}
-                // )
-            })};
-            function getNewGif(gif){
-            //    gif.setAttribute("img src", newGif);
-
-            }
             
-            
-            fetchButton.addEventListener('click', getApi);
-
-//     var listItem = document.createElement('li');
-//     listItem.textContent = data[i].html_url;
-//     repoList.appendChild(listItem)
+        })};
+        
+        getApi();
+    
+   
