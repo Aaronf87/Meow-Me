@@ -9,7 +9,8 @@ var executeButton = $('#executeBtn');
 // Array of background images
 function changeBg() {
     var images = ['url("images/image.png")', 
-    'url("images/cat 2.jpg")', 
+    'url("images/cat 1.jpg")', 
+    'url("images/cat 2.jpg")',
     'url("images/cat 3.jpg")',
     'url("images/cat 4.jpg")',
     'url("images/cat 5.jpg")',
@@ -17,6 +18,8 @@ function changeBg() {
     
 
 ]
+
+// Randomly selects an image from the array and sets it as the background image
 var section = document.querySelector('section');
 var bg = images[Math.floor(Math.random() * images.length)];
 section.style.backgroundImage = bg;
@@ -24,18 +27,12 @@ section.style.backgroundSize = "cover";
 section.style.backgroundRepeat = "no-repeat";
 section.style.backgroundPosition = "center";
 section.style.backgroundAttachment = "fixed";
+section.style.transition = "all 1s ease-in-out";
 
 
 }
 setInterval(changeBg, 10000);
 changeBg();
-
-
-
-
-
-
-// Function to change background image
 
 
 
