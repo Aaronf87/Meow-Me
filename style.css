@@ -1,4 +1,5 @@
 
+/* applies to all elements */
 * {
     padding: auto;
     color: black;
@@ -8,9 +9,9 @@
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
     background-image: url(https://wallpapers.com/images/featured/nyan-cat-background-1ldrgvod52e6vi0m.jpg);
-   
 }
 
+/* applies to all h1 elements */
 h1{
     font: (1em, 50px) 'Josefin Sans';
     color: rgb(243, 7, 7);
@@ -21,35 +22,50 @@ h1{
     margin-bottom: auto;
 }
 
+/* applies to the time and date on the page */
+#time {
+    text-align: center;
+    color: lightgrey;
+}
+
+/* applies to all list elements */
 li {
     justify-content: space-between;
     display: list-item;
     list-style-type: "🐾";
 }
 
+/* applies to the entire list */
 ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
+/* applies to the gifs on page */
 img {
     max-height: 200px;
     border-radius: 15px;
-
 }
 
+/* applies to all elements in the main body of html */
 main {
     display:flex;
-    
-
 }
 
-button {
+/* applies to the load/execute button on page */
+.button {
     position: fixed;
     top: 50%;
     left: 50%;
 }
+
+/* applies to the refresh button */
+#refreshBtn{
+    position: relative;
+}
+
+/* applies to the load button */
 #loadBtn {
 background-color: rgb(6, 6, 6);
 position: relative;
@@ -58,15 +74,12 @@ left: 50%;
 bottom: 0px;
 }
 
+/* applies to the execute button */
 #executeBtn{
     position: relative;
 }
 
-#refreshBtn{
-    position: relative;
-    left: 1px;
-}
-
+/* this makes the content on screen reponsive to smaller screen sizes, it will condense the content to a single column */
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
