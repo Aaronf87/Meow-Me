@@ -1,4 +1,5 @@
 
+/* applies to all elements */
 * {
     padding: auto;
     color: rgb(0, 0, 0);
@@ -6,22 +7,13 @@
     font-weight: 100;
     font-size: max(1rem, 32px);
     font-family: 'Josefin Sans', sans-serif;
-    background: fixed;
-   
+    background-attachment: fixed;
+    
 }
-section {
-    position: relative;
-    margin: auto;
+section{
     background-image: url(images/image.png);
-    
-    
-   
-    
-    
-   
-   
-   
 }
+/* applies to all h1 elements */
 h1{
     font-weight: 400;
     font-size: 42px;
@@ -33,6 +25,13 @@ h1{
     margin-bottom: auto;
 }
 
+/* applies to the time and date on the page, centers it */
+#time {
+    text-align: center;
+    color: lightgrey;
+}
+
+/* applies to all list elements, changes the bullet points to pawprints */
 li {
     display: flex;
     justify-content: space-between;
@@ -40,29 +39,39 @@ li {
     list-style-type: "🐾";
 }
 
+/* applies to the entire list */
 ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: auto;
 }
 
+/* applies to the gifs on page */
 img {
-    max-height: 200px;
+    max-height: 300px;
     border-radius: 15px;
-
 }
 
+/* applies to all elements in the main body of html */
 main {
     display:flex;
-    
-
 }
 
-button {
+/* applies to the load/execute button on page */
+.button {
     position: fixed;
     top: 50%;
     left: 50%;
 }
+
+/* applies to the refresh button */
+#refreshBtn{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* applies to the load button */
 #loadBtn {
 background-color: rgb(6, 6, 6);
 position: relative;
@@ -71,29 +80,14 @@ left: 50%;
 bottom: 0px;
 }
 
+/* applies to the execute button */
 #executeBtn{
     position: relative;
 }
 
-#refreshBtn{
-    position: relative;
-    left: 1px;
-}
-
+/* this makes the content on screen reponsive to smaller screen sizes, it will condense the content to a single column */
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
     }
-}
-
-#time {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size:  32px;
-    font-weight: 800;
-    color: bold rgb(218, 8, 8);
-
-
-
 }

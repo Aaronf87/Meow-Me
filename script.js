@@ -23,6 +23,8 @@ section.style.backgroundImage = bg;
 section.style.backgroundSize = "cover";
 section.style.backgroundRepeat = "no-repeat";
 section.style.backgroundPosition = "center";
+section.style.backgroundAttachment = "fixed";
+
 
 }
 setInterval(changeBg, 10000);
