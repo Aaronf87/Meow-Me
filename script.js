@@ -7,11 +7,11 @@ var executeButton = $('#executeBtn');
 // Array of background images
 function changeBg() {
     var images = ['url("images/image.png")', 
-    'url("images/cat 2.jpg")', 
+    'url("images/cat 1.jpg")', 
+    'url("images/cat 2.jpg")',
     'url("images/cat 3.jpg")',
     'url("images/cat 4.jpg")',
     'url("images/cat 5.jpg")',
-    'url("images/cat 6.jpg")',
     
 
 ]
