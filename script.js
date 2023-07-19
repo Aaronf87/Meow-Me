@@ -1,5 +1,3 @@
-// Description: This file contains the code for the main page of the app
-
 var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
@@ -10,7 +8,7 @@ var executeButton = $('#executeBtn');
 function changeBg() {
     var images = ['url("images/image.png")', 
     'url("images/cat 1.jpg")', 
-    'url("images/cat 2.jpg")',
+    'url("images/cat 2.jpg")', 
     'url("images/cat 3.jpg")',
     'url("images/cat 4.jpg")',
     'url("images/cat 5.jpg")',
@@ -111,7 +109,7 @@ function time(){
     date.textContent = myDate;
   }
   setInterval(time, 1000);
-
+  
   // Setting up GiphyApi
   
   var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
@@ -185,4 +183,4 @@ function time(){
 
 
 
-
+   
