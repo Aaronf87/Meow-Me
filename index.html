@@ -22,16 +22,19 @@
 
     <body>
         <header>
+            <!-- creates a header for page, adds a div for time and date -->
             <h1>Meow Me!</h1>
             <div id="time"></div>
         </header>
 
+        <!-- adds a refresh button -->
         <button type="button" class="button is-link is-outlined" id="refreshBtn">Refresh Me!</button>
         <span class="icon is-small">
             <i class="fas fa-align-center"></i>
         </span>
 
     <main>
+        <!-- left hand div to hold videos from youtube -->
         <div class="left"></div>
             <ul>
                 <li id="v1"><iframe id="vid1" width="420" height="315" src=""
@@ -45,6 +48,7 @@
                 <li id="v5"><iframe id="vid5" width="420" height="315" src=""
                     ></iframe></li>
             </ul>
+            <!-- right hand div to hold gifs -->
             <div class="right"></div>
             <ul>
                 <li><img id = "gf1" alt = "cat gif" src = ""></li>
@@ -56,6 +60,7 @@
             </ul>
     </main>
  
+        <!-- creates a load and execute button to load youtube videos from api -->
         <div class="buttons"></div>
             <button class="button is-warning is-outlined"id="loadBtn">Load</button>
             <span class="icon is-medium">
