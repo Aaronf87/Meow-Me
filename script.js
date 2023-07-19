@@ -1,7 +1,45 @@
+// Description: This file contains the code for the main page of the app
+
 var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
 
+
+// **** Background section ****
+// Array of background images
+function changeBg() {
+    var images = ['url("images/image.png")', 
+    'url("images/cat 2.jpg")', 
+    'url("images/cat 3.jpg")',
+    'url("images/cat 4.jpg")',
+    'url("images/cat 5.jpg")',
+    'url("images/cat 6.jpg")',
+    
+
+]
+var section = document.querySelector('section');
+var bg = images[Math.floor(Math.random() * images.length)];
+section.style.backgroundImage = bg;
+section.style.backgroundSize = "cover";
+section.style.backgroundRepeat = "no-repeat";
+section.style.backgroundPosition = "center";
+
+}
+setInterval(changeBg, 10000);
+changeBg();
+
+
+
+
+
+
+// Function to change background image
+
+
+
+
+
+// **** End of background section ****
 
 // Function runs once refresh button is clicked
 function refresh (event) {
@@ -74,7 +112,7 @@ function time(){
     date.textContent = myDate;
   }
   setInterval(time, 1000);
-  
+
   // Setting up GiphyApi
   
   var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
@@ -118,4 +156,34 @@ function time(){
         
         getApi();
     
-   
+   localStorage.setItem("gif", gif);
+    localStorage.setItem("gif2", gif2);
+    localStorage.setItem("gif3", gif3);
+    localStorage.setItem("gif4", gif4);
+    localStorage.setItem("gif5", gif5);
+
+    // var gif = localStorage.getItem("gif");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
