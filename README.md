@@ -14,15 +14,15 @@ Project Title:
 User Story:
 
 AS A stressed out cat individual
-I WANT to a 5 read or video break to get my cat fix.
-SO THAT I can use my time efficiently and get to work after words.
+I WANT to a 5 minute cat gif or video break to get my cat fix.
+SO THAT I can use my destress, use the rest of time efficiently, and be productive afterwords.
 
 
 Wireframe or Sketch:  One page, left - 5 cat videos, right - top 5 cat gifs
 
 
-APIs:
-You tube API and google custom search api
+APIs used in Meow Me app:
+Youtube API and Giphy API
 ```
 
 ## PROJECT GOALS
@@ -43,7 +43,7 @@ Described your individual role and contributions to your project.
 ```
 You and your group will use everything you’ve learned over the past six weeks to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
 
-Use a CSS framework other than Bootstrap.
+Use a CSS framework other than Bootstrap.✅
 
 Be deployed to GitHub Pages.✅
 
