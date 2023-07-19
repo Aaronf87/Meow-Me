@@ -23,49 +23,59 @@ crossorigin="anonymous"
         <div id="time"></div>
     </header>
 
-<button type="button" class="button is-link is-outlined" id="refreshBtn">Refresh Me!</button>
-<span class="icon is-small">
-    <i class="fas fa-align-center"></i>
-  </span>
-<main>
-    <div class="left"></div>
-        <ul>
-            <li id="v1"><iframe id="vid1" width="420" height="315" src=""
-                ></iframe></li>
-            <li id="v2"><iframe id="vid2" width="420" height="315" src=""
-                ></iframe></li>
-            <li id="v3"><iframe id="vid3" width="420" height="315" src=""
-                ></iframe></li>
-            <li id="v4"><iframe id="vid4" width="420" height="315" src=""
-                ></iframe></li>
-            <li id="v5"><iframe id="vid5" width="420" height="315" src=""
-                ></iframe></li>
-        </ul>
-        <div class="right"></div>
-        <ul>
-            <li><img id = "gf1" alt = "cat gif" src = ""></li>
-            <li><img id = "g2" alt = "cat gif" src = ""></li>
-            <li><img id = "g3" alt = "cat gif" src = ""></li>
-            <li><img id = "g4" alt = "cat gif" src = ""></li>
-            <li><img id = "g5" alt = "cat gif5" src = ""></li>
-           
-        </ul>
-        
-        
+    <body>
+        <header>
+            <!-- creates a header for page, adds a div for time and date -->
+            <h1>Meow Me!</h1>
+            <div id="time"></div>
+        </header>
+
+        <!-- adds a refresh button -->
+        <button type="button" class="button is-link is-outlined" id="refreshBtn">Refresh Me!</button>
+        <span class="icon is-small">
+            <i class="fas fa-align-center"></i>
+        </span>
+
+    <main>
+        <!-- left hand div to hold videos from youtube -->
+        <div class="left"></div>
+            <ul>
+                <li id="v1"><iframe id="vid1" width="420" height="315" src=""
+                    ></iframe></li>
+                <li id="v2"><iframe id="vid2" width="420" height="315" src=""
+                    ></iframe></li>
+                <li id="v3"><iframe id="vid3" width="420" height="315" src=""
+                    ></iframe></li>
+                <li id="v4"><iframe id="vid4" width="420" height="315" src=""
+                    ></iframe></li>
+                <li id="v5"><iframe id="vid5" width="420" height="315" src=""
+                    ></iframe></li>
+            </ul>
+            <!-- right hand div to hold gifs -->
+            <div class="right"></div>
+            <ul>
+                <li><img id = "gf1" alt = "cat gif" src = ""></li>
+                <li><img id = "g2" alt = "cat gif" src = ""></li>
+                <li><img id = "g3" alt = "cat gif" src = ""></li>
+                <li><img id = "g4" alt = "cat gif" src = ""></li>
+                <li><img id = "g5" alt = "cat gif5" src = ""></li>
+            
+            </ul>
     </main>
  
-    
-    <div class="buttons"></div>
- <button class="button is-warning is-outlined"id="loadBtn">Load</button>
- <span class="icon is-medium">
-    <i class="fas fa-align-center"></i>
-  </span>
-<button class="button is-danger is-outlined" id="executeBtn">Execute</button>
-<span class="icon is-medium">
-        <i class="fas fa-align-center"></i>
-      </span>
-</div>
+        <!-- creates a load and execute button to load youtube videos from api -->
+        <div class="buttons"></div>
+            <button class="button is-warning is-outlined"id="loadBtn">Load</button>
+            <span class="icon is-medium">
+                <i class="fas fa-align-center"></i>
+            </span>
+            <button class="button is-danger is-outlined" id="executeBtn">Execute</button>
+            <span class="icon is-medium">
+                    <i class="fas fa-align-center"></i>
+                </span>
+        </div>
 
+<<<<<<< HEAD
 
 <footer class="footer">
     <div class="content has-text-centered">
@@ -82,6 +92,15 @@ crossorigin="anonymous"
       crossorigin="anonymous"
     ></script>
 <script src="./script.js"></script>
+=======
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- Link the DayJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"></script>
+    <!-- Link to our javascript -->    
+    <script src="./script.js"></script>
+>>>>>>> 2cee6cfd34bddd7cb1b0c4e974513dddffc4f490
 
-</body>
+    </body>
 </html>
