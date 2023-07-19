@@ -8,11 +8,7 @@
     font-size: max(1rem, 32px);
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
-   
-}
-section{
-    background-image: url(images/image.png);
-    
+    background-image: url(https://wallpapers.com/images/featured/nyan-cat-background-1ldrgvod52e6vi0m.jpg);
 }
 /* applies to all h1 elements */
 h1{
@@ -26,13 +22,6 @@ h1{
     margin-bottom: auto;
 }
 
-/* applies to the time and date on the page, centers it */
-#time {
-    text-align: center;
-    color: lightgrey;
-}
-
-/* applies to all list elements, changes the bullet points to pawprints */
 li {
     display: flex;
     justify-content: space-between;
@@ -44,35 +33,24 @@ li {
 ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
+    justify-content: space-around;
 }
 
 /* applies to the gifs on page */
 img {
-    max-height: 300px;
+    max-height: 200px;
     border-radius: 15px;
 }
 
-/* applies to all elements in the main body of html */
 main {
     display:flex;
 }
 
-/* applies to the load/execute button on page */
-.button {
+button {
     position: fixed;
     top: 50%;
     left: 50%;
 }
-
-/* applies to the refresh button */
-#refreshBtn{
-    position: relative;
-    margin-bottom: 20px;
-}
-
-/* applies to the load button */
 #loadBtn {
 background-color: rgb(6, 6, 6);
 position: relative;

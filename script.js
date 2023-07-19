@@ -1,3 +1,5 @@
+// Description: This file contains the code for the main page of the app
+
 var refreshEl = $('#refreshBtn');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
@@ -15,23 +17,21 @@ function changeBg() {
     
 
 ]
+
+// Randomly selects an image from the array and sets it as the background image
 var section = document.querySelector('section');
 var bg = images[Math.floor(Math.random() * images.length)];
 section.style.backgroundImage = bg;
 section.style.backgroundSize = "cover";
 section.style.backgroundRepeat = "no-repeat";
 section.style.backgroundPosition = "center";
+section.style.backgroundAttachment = "fixed";
+section.style.transition = "all 1s ease-in-out";
+
 
 }
 setInterval(changeBg, 10000);
 changeBg();
-
-
-
-
-
-
-// Function to change background image
 
 
 
@@ -110,7 +110,7 @@ function time(){
     date.textContent = myDate;
   }
   setInterval(time, 1000);
-  
+
   // Setting up GiphyApi
   
   var gifApi = "amSDMJMFRxFF5Ej4oCSnlYCraoqRKbfS";
@@ -154,4 +154,34 @@ function time(){
         
         getApi();
     
-   
+   localStorage.setItem("gif", gif);
+    localStorage.setItem("gif2", gif2);
+    localStorage.setItem("gif3", gif3);
+    localStorage.setItem("gif4", gif4);
+    localStorage.setItem("gif5", gif5);
+
+    // var gif = localStorage.getItem("gif");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
