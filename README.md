@@ -22,6 +22,8 @@ Day and time using Day.js
 
 Gifs loaded from Giphy API
 
+A set of rotating background images
+
 ## Technologies Used
 
 APIs:
