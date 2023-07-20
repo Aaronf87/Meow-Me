@@ -1,10 +1,10 @@
 // Description: This file contains the code for the main page of the app
 
-var refreshEl = $('#refreshBtn');
+var holdEl = $('#hold');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
 
-
+console.log(holdEl);
 // **** Background section ****
 // Array of background images
 function changeBg() {
@@ -14,10 +14,11 @@ function changeBg() {
     'url("images/cat 3.jpg")',
     'url("images/cat 4.jpg")',
     'url("images/cat 5.jpg")',
-    'url("images/cat 6.jpg")',
     
 
 ]
+localStorage.setItem("images", JSON.stringify(images));
+images = JSON.parse(localStorage.getItem("images"));
 
 // Randomly selects an image from the array and sets it as the background image
 var section = document.querySelector('section');
@@ -28,11 +29,17 @@ section.style.backgroundRepeat = "no-repeat";
 section.style.backgroundPosition = "center";
 section.style.backgroundAttachment = "fixed";
 section.style.transition = "all 1s ease-in-out";
+function keep(){
 
+    console.log(bg);
 
+}
 }
 setInterval(changeBg, 10000);
 changeBg();
+
+
+
 
 
 
@@ -45,6 +52,12 @@ function refresh (event) {
 event.preventDefault;
 this.hide();
 }
+
+
+
+
+
+
 
 // **** Youtube fetch  section ****
 // Loads youtube api client
@@ -95,7 +108,7 @@ gapi.load("client");
 // **** End of Youtube fetch section ****
 
 // Listener on refresh button
-refreshEl.on('click', refresh);
+holdEl.on('click', refresh);
 // Listener on YT api client load button
 loadButton.on('click', loadClient);
 // Listener on TY api execute fetch button
@@ -150,18 +163,18 @@ function time(){
                 gif4.src = response.data[3].images.original.url;
                 gif5.src = response.data[4].images.original.url;
             };
-            
-        })};
-        
-        getApi();
-    
-   localStorage.setItem("gif", gif);
-    localStorage.setItem("gif2", gif2);
-    localStorage.setItem("gif3", gif3);
-    localStorage.setItem("gif4", gif4);
-    localStorage.setItem("gif5", gif5);
+              }
+                );
+                }
+        // calling the function to run...
+       
 
-    // var gif = localStorage.getItem("gif");
+
+
+
+        getApi();
+        // setInterval(getApi, 10000);
+
 
 
 

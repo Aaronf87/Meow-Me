@@ -16,22 +16,25 @@ crossorigin="anonymous"
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>Meow Me!</title>
 </head>
+
 <body>
   <section class="background" aria-label="bg">
-
-    <header>
-        <h1 class="title is-1">Meow Me!</h1> 
+    <header class="top">
+        <h1 class="title is-1 is-danger" >Meow Me!</h1> 
         <div id="time">
-        
+        </div>
+        <button type="button" class="button is-link is-outlined" id="hold">Hold Background</button>
+        <div class="buttons">
+            <button class="button youtubeButtons is-warning is-outlined"id="loadBtn">Load</button>
+            <button class="button youtubeButtons is-danger is-outlined" id="executeBtn">Execute</button>
         </div>
     </header>
   
-<button type="button" class="button is-link is-outlined" id="refreshBtn">Refresh Me!</button>
-<span class="icon is-small">
-    <i class="fas fa-align-center"></i>
-  </span>
+    <span class="icon is-small">
+        <i class="fas fa-align-center"></i>
+    </span>
 <main>
-    <div class="left"></div>
+    <div class="left">
         <ul>
             <li id="v1"><iframe id="vid1" width="420" height="315" src=""
                 ></iframe></li>
@@ -44,32 +47,21 @@ crossorigin="anonymous"
             <li id="v5"><iframe id="vid5" width="420" height="315" src=""
                 ></iframe></li>
         </ul>
-        <div class="right"></div>
+    </div>
+        <div class="right">
         <ul>
             <li><img id = "gf1" alt = "cat gif" src = ""></li>
             <li><img id = "g2" alt = "cat gif" src = ""></li>
             <li><img id = "g3" alt = "cat gif" src = ""></li>
             <li><img id = "g4" alt = "cat gif" src = ""></li>
             <li><img id = "g5" alt = "cat gif5" src = ""></li>
-           
         </ul>
-        
-        
-    </main>
- 
-    
-    <div class="buttons"></div>
- <button class="button is-warning is-outlined"id="loadBtn">Load</button>
- <span class="icon is-medium">
-    <i class="fas fa-align-center"></i>
-  </span>
-<button class="button is-danger is-outlined" id="executeBtn">Execute</button>
-<span class="icon is-medium">
-        <i class="fas fa-align-center"></i>
-      </span>
     </div>
         
-      </section>
+    </main>
+
+    </section>
+
     <script src="https://apis.google.com/js/api.js"></script>
     <!-- Link the DayJS library -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
@@ -77,23 +69,17 @@ crossorigin="anonymous"
         crossorigin="anonymous"></script>
     <!-- Link to our javascript -->    
     <script src="./script.js"></script>
- 
- 
- 
-
-
-
-
-
 
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
         <strong>Meow Me!</strong> by <a href="https://aaronf87.github.io/Meow-Me/">A.M.H.A</a>. The source code is licensed
       </p>
-      </div>
-      </footer>
-    </section>  
+    </div>
+</footer>
+
+  </section>
+
 <script src="https://apis.google.com/js/api.js"></script>
 <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -101,7 +87,5 @@ crossorigin="anonymous"
       crossorigin="anonymous"
     ></script>
 <script src="./script.js"></script>
-
-
     </body>
 </html>
