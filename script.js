@@ -29,8 +29,11 @@ section.style.backgroundRepeat = "no-repeat";
 section.style.backgroundPosition = "center";
 section.style.backgroundAttachment = "fixed";
 section.style.transition = "all 1s ease-in-out";
-console.log(bg);
+function keep(){
 
+    console.log(bg);
+
+}
 }
 setInterval(changeBg, 10000);
 changeBg();
