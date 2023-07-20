@@ -1,67 +1,40 @@
-# Meow-Me
+# Meow-Me 😺
 Meow Me is the only app you need!!
 
-Link to site
+## Link to deployed application:
 https://aaronf87.github.io/Meow-Me/
 
-Project Title: 
+## Project Description
 
-    Meow Me 😺 
-
-## Project Description  ---------------------
-
+We all know the daily stress that comes with being a working individual and it can be hard to find time to destress without falling into the rabbit hole of anxiety-inducing social media. Meow Me is here to help you destress and get back to work. Its great for those with a few minutes to spare at work. Meow Me is a cat content app that allows you to view cat videos and cat gifs on the same page. 
 
 User Story:
 
 AS A stressed out cat individual
-I WANT to a 5 minute cat gif or video break to get my cat fix.
-SO THAT I can use my destress, use the rest of time efficiently, and be productive afterwords.
+I WANT to take some time to destress during my day and view cat content
+SO THAT I can destress, use the rest of my time efficiently, and be productive afterwards.
 
+## Features
 
-Wireframe or Sketch:  One page, left - 5 cat videos, right - top 5 cat gifs
+Load and "Meow Me" button to load the videos from Youtube API. Gifs are preloaded onto the page. 
 
+Day and time using Day.js
 
-APIs used in Meow Me app:
+Gifs loaded from Giphy API
+
+A set of rotating background images
+
+## Technologies Used
+
+APIs:
 Youtube API and Giphy API
-```
 
-## PROJECT GOALS
-```
-Progressed towards finalizing the MVP of your project.✅
+CSS Framework: Bulma
 
-By the end we will have done the following:
+## Screenshots of Application
 
-Demonstrated your deployed project.
+![Top of page](./images/header,%20buttons.png)
 
-Explained the technical implementation of your project.
+![Main Content of Page](./images/main%20content.png)
 
-Described your individual role and contributions to your project.
-
-
-
-## Project Requirements
-```
-You and your group will use everything you’ve learned over the past six weeks to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
-
-Use a CSS framework other than Bootstrap.✅
-
-Be deployed to GitHub Pages.✅
-
-Be interactive (i.e: accept and respond to user input).✅
-
-Use at least two server-side APIs.✅
-
-Does not use alerts, confirms, or prompts (use modals).✅
-
-Use client-side storage to store persistent data.
-
-Be responsive.
-
-Have a polished UI.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
-
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-Finally, You must add your project to the portfolio that you created in Module 2.
-```
+![Footer](./images/footer.png)
