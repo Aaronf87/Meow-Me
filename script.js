@@ -4,7 +4,6 @@ var holdEl = $('#hold');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
 
-console.log(holdEl);
 // **** Background section ****
 // Array of background images
 function changeBg() {
@@ -142,7 +141,6 @@ function time(){
         })
         .then(function (response) {
             // console log to examine the right data...
-            // console.log(response.data[0].images.original.url)
             // grabbing element 
             var gif = document.getElementById("gf1")
             var gif2 = document.getElementById("g2")
@@ -151,12 +149,12 @@ function time(){
             var gif5 = document.getElementById("g5")
             // saving the gif into a variable named gif..
             // gif.textContent = response.data[0].images.original.url
-            console.log(response.data);
+            // console.log(response.data);
             
             
             for (var i = 0; i <= 5; i++) {
                 var fetchGif = response.data[i].images.original.url
-                console.log(i);
+                // console.log(i);
                 gif.src =  response.data[0].images.original.url;
                 gif2.src = response.data[1].images.original.url;
                 gif3.src = response.data[2].images.original.url;
