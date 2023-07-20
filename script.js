@@ -14,10 +14,11 @@ function changeBg() {
     'url("images/cat 3.jpg")',
     'url("images/cat 4.jpg")',
     'url("images/cat 5.jpg")',
-    'url("images/cat 6.jpg")',
     
 
 ]
+localStorage.setItem("images", JSON.stringify(images));
+images = JSON.parse(localStorage.getItem("images"));
 
 // Randomly selects an image from the array and sets it as the background image
 var section = document.querySelector('section');
@@ -38,6 +39,9 @@ changeBg();
 
 
 
+
+
+
 // **** End of background section ****
 
 // Function runs once refresh button is clicked
@@ -45,6 +49,12 @@ function refresh (event) {
 event.preventDefault;
 this.hide();
 }
+
+
+
+
+
+
 
 // **** Youtube fetch  section ****
 // Loads youtube api client
@@ -150,18 +160,18 @@ function time(){
                 gif4.src = response.data[3].images.original.url;
                 gif5.src = response.data[4].images.original.url;
             };
-            
-        })};
-        
-        getApi();
-    
-   localStorage.setItem("gif", gif);
-    localStorage.setItem("gif2", gif2);
-    localStorage.setItem("gif3", gif3);
-    localStorage.setItem("gif4", gif4);
-    localStorage.setItem("gif5", gif5);
+              }
+                );
+                }
+        // calling the function to run...
+       
 
-    // var gif = localStorage.getItem("gif");
+
+
+
+        getApi();
+        // setInterval(getApi, 10000);
+
 
 
 

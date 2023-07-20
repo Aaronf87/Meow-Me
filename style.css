@@ -8,10 +8,7 @@
     font-size: max(1rem, 32px);
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
-}
-
-section{
-    background-image: url(images/image.png);
+   
 }
 
 .top {
@@ -39,6 +36,22 @@ h1{
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+#time{
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-family: 'Josefin Sans';
+    font-size: 32px
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    display: list-item;
+    list-style-type: "🐾";
 }
 
 /* applies to the entire list */
@@ -87,10 +100,16 @@ bottom: 0px;
 #executeBtn{
     position: relative;
 }
-
+#refreshBtn{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
 /* this makes the content on screen reponsive to smaller screen sizes, it will condense the content to a single column */
 @media screen and (max-width: 768px) {
     main {
         flex-direction: column;
     }
 }
+
