@@ -101,6 +101,7 @@ color:rgb(0, 0, 0);
 bottom: 0px;
 font-weight: 400;
 box-shadow: 12px 6px 10px 3px rgba(40, 0, 0, 1);
+transition: 0.25s;
 
 }
 
@@ -111,14 +112,30 @@ box-shadow: 12px 6px 10px 3px rgba(40, 0, 0, 1);
     color:rgb(0, 0, 0);
     font-weight: 400;
     box-shadow: 12px 6px 10px 3px rgba(40, 0, 0, 1);
+    transition: 0.25s;
+
 
 }
+#executeBtn:hover{
+
+    background-color: rgb(206, 42, 58);
+    color: rgb(24, 16, 16);
+    transform: scale(1.1);
+  }
 
 #refreshBtn{
     justify-content: center;
     align-items: center;
     display: flex;
+    transition: 0.25s;
+
 }
+#loadBtn:hover{
+
+    background-color:rgb(246, 191, 10);
+    color: rgb(24, 16, 16);
+    transform: scale(1.1);
+  }
 
 /* this makes the content on screen reponsive to smaller screen sizes, it will condense the content to a single column */
 @media screen and (max-width: 768px) {
