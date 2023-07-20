@@ -8,7 +8,6 @@
     font-size: max(1rem, 32px);
     font-family: 'Josefin Sans', sans-serif;
     background-attachment: fixed;
-   
 }
 
 .top {
@@ -17,13 +16,17 @@
     justify-content: center;
 }
 
-
 button {
     max-width: 200px;
 }
 
 #refreshBtn {
     align-self: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* applies to all h1 elements */
@@ -83,16 +86,11 @@ main {
 }
 
 .youtubeButtons {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+    margin-top: 8px;
 }
 
 #loadBtn {
 background-color: rgb(6, 6, 6);
-position: relative;
-margin-left: -50px;
-left: 50%;
 bottom: 0px;
 }
 
@@ -100,12 +98,13 @@ bottom: 0px;
 #executeBtn{
     position: relative;
 }
+
 #refreshBtn{
     justify-content: center;
     align-items: center;
     display: flex;
-    
 }
+
 /* this makes the content on screen reponsive to smaller screen sizes, it will condense the content to a single column */
 @media screen and (max-width: 768px) {
     main {
