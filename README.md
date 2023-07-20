@@ -31,6 +31,13 @@ Youtube API and Giphy API
 
 CSS Framework: Bulma
 
+## Credits
+
+Aaron Flores https://github.com/Aaronf87
+Alex Hornedo https://github.com/Ahorn47
+Houston Davis https://github.com/HDavis147
+Monica Cordova https://github.com/cordovamonica
+
 ## Screenshots of Application
 
 ![Top of page](./images/header,%20buttons.png)
