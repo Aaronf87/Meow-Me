@@ -1,10 +1,10 @@
 // Description: This file contains the code for the main page of the app
 
-var refreshEl = $('#refreshBtn');
+var holdEl = $('#hold');
 var loadButton = $('#loadBtn');
 var executeButton = $('#executeBtn');
 
-
+console.log(holdEl);
 // **** Background section ****
 // Array of background images
 function changeBg() {
@@ -105,7 +105,7 @@ gapi.load("client");
 // **** End of Youtube fetch section ****
 
 // Listener on refresh button
-refreshEl.on('click', refresh);
+holdEl.on('click', refresh);
 // Listener on YT api client load button
 loadButton.on('click', loadClient);
 // Listener on TY api execute fetch button
